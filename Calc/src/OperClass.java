@@ -4,16 +4,15 @@ public class OperClass {
 	Hap hp;
 	NumVO nc; //고정
 	OpVo ov;
-	AddClass ac;
-	MinusClass mc; //변해야 되는
+
 	//생성자
-	public OperClass(String op) {
+	public OperClass() {
 		System.out.println("계산기 프로그램");
 		//ac = new MinusClass();
 		nc = new NumVO();
-		ov = new OpVo(op);
-		ac = new AddClass();
-		mc = new MinusClass();
+		ov = new OpVo();
+		hp = new ClacClass();
+//		mc = new MinusClass();
 	}
 	
 	public void inputOp() {
@@ -32,11 +31,8 @@ public class OperClass {
 	}
 	
 	public void printResult() {
-		if(ov.getOp().equals("+")) {
-			
-			ac.clac(nc);
-		}else if(ov.getOp().equals("-")) {
-			mc.clac(nc);
-		}
+		hp.clac(nc, ov);
+		System.out.println(nc.getNum1() + ov.getOp() + nc.getNum2() 
+							+ "=" + nc.getResutl());
 	}
 }

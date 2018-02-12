@@ -6,4 +6,10 @@ public class MinusClass implements Hap {
 	 int num2 = nc.getNum2();
 	 System.out.println(num1+"-"+num2+"="+(num1-num2)+"ㅋㅋㅋㅋ");
  }
+
+	@Override
+	public void clac(NumVO nc, OpVo op) {
+		// TODO Auto-generated method stub
+		
+	}
 }
